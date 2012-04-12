@@ -24,9 +24,8 @@
                        data-bind="value: content, valueUpdate: 'afterkeydown', enterKey: $root.stopEditing, selectAndFocus: editing, event: { blur: $root.stopEditing }"/>
             </li>
         </ul>
-        <input id="new-todo" type="text" data-bind="value: current, valueUpdate: 'afterkeydown', enterKey: add"
-               placeholder="What needs to be done?"/>
     </section>
+    <input id="new-todo" type="text" data-bind="value: current, valueUpdate: 'afterkeydown', enterKey: add" placeholder="What needs to be done?"/>
     <footer data-bind="block: completedCount() || remainingCount()">
         <a id="clear-completed" href="#" data-bind="inline: completedCount, click: removeCompleted">
             Clear <span data-bind="text: completedCount"></span>
